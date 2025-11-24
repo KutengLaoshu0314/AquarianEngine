@@ -11,10 +11,10 @@
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
+    , MainEngine()
 {
     ui->setupUi(this);
-    this->setWindowTitle("HELLO");
-    this->MainEngine = Engine();
+    //this->setWindowTitle("HELLO");
 
     QTextStream(stdout) << MainEngine.handle().toString() << Qt::endl;
     qDebug() << "Debug message from QTest";
